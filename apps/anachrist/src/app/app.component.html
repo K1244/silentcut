@@ -1,3 +1,5 @@
-<h1>Aloha {{ title }}</h1>
+<h1>Make a wish : {{ title }}</h1>
 
 <input type="text" (keyup)="title = $any($event.target).value" />
+
+<button type="button" (click)="title = 'anachrist'">reset to anachrist</button>
