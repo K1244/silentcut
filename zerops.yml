@@ -29,7 +29,7 @@ anachrist:
     # files in folder dist without the folder
     # itself, either way make sure your nginx
     # config points to the correct folder
-    deploy: [ 'dist/app/anachrist/~' ]
+    deploy: [ 'dist/apps/anachrist/~' ]
 
     # *optional*: which files / folders
     # to cache for the next use
