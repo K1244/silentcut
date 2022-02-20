@@ -1,0 +1,28 @@
+{
+  "root": "apps/anachrist-e2e",
+  "sourceRoot": "apps/anachrist-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/anachrist-e2e/cypress.json",
+        "devServerTarget": "anachrist:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "anachrist:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/anachrist-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["anachrist"]
+}
